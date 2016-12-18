@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1481256817 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\consellerinfomanage.c
+
+1481257025 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.c
+
+1481256177 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.c
+
+1481256709 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.c
+
+1481256748 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.c
+
+1481256133 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.c
+
+1481279259 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	"SMS.h"
+	"Common.h"
+
+1481257011 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
+
+1481279282 d:\chris_data\homework\structured_progamming\student_manage_system\src\common.h
+
