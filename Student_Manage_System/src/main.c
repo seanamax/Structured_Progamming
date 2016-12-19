@@ -5,7 +5,6 @@
 
 int main()
 {
-    bool flag;
 
     return 0;
 }

@@ -1,4 +1,5 @@
 #ifndef COMMON_H
+#define COMMON_H
 
 #define NAME_LEN 20
 #define PASSWORD_LEN 20
@@ -17,13 +18,16 @@ typedef struct _admin admin;
 typedef char bool;
 
 
+// 该系统中所有人的账号信息
 struct _ID
 {
 	char id[ID_LEN];
 	char password[PASSWORD_LEN];
 	char flag;
-}
+};
 
+
+// 科目信息
 struct _subject
 {
     char name[NAME_LEN];
@@ -32,7 +36,7 @@ struct _subject
 };
 
 
-
+// 班级信息
 struct _class
 {
     char name[NAME_LEN];
@@ -40,34 +44,34 @@ struct _class
 };
 
 
-
+// 学生信息
 struct _student
 {
-    struct _ID *id;
+    struct _ID *pID;
     char name[NAME_LEN];
     char class[CLASS_NAME_LEN];
     char address[ADDRESS_LEN];
     char phoneNumber[PHONENUMBER_LEN];
     struct _subject *pSubject;
     size_t subjectNum;
-    size_t deleteManageClassNum;
 };
 
 
-
+// 辅导员信息
 struct _conseller
 {
-    struct _ID *id;
+    struct _ID *pID;
     char name[NAME_LEN];
     char address[ADDRESS_LEN];
     struct _class *pClass;
     size_t manageClassNum;
-    size_t deleteManageClassNum;
 };
 
+
+// 管理员信息
 struct _admin
 {
-    struct *_ID;
+    struct _ID *pID;
 };
 
 

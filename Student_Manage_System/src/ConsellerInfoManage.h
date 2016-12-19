@@ -1,4 +1,5 @@
 #ifndef CONSELLERINFOMANAGE_H
+#define CONSELLERINFOMANAGE_H
 
 #include "common.h"
 
@@ -63,5 +64,7 @@ void DispConsellerInfo(const conseller *const pConseller);
 // const conseller *pConsellerArray 参数指需要显示的辅导员数组指针
 // const size_t conLen 参数指需要显示的辅导员数组的长度
 void DispAllConsellerInfo(const conseller *const pConsellerArray, const size_t conLen);
+
+
 
 #endif // CONSELLERINFOMANAGE_H

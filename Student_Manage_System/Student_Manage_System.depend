@@ -11,13 +11,32 @@
 
 1481256133 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.c
 
-1481279259 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\main.c
+1482156344 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	"SMS.h"
 	"Common.h"
 
-1481257011 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
+1482157128 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
+	"ConsellerInfoManage.h"
+	"StudentInfoManage.h"
+	"StudentMarkManage.h"
+	"StudentSubjectManage.h"
+	"UserManage.h"
 
-1481279282 d:\chris_data\homework\structured_progamming\student_manage_system\src\common.h
+1482157117 d:\chris_data\homework\structured_progamming\student_manage_system\src\common.h
+
+1482157214 d:\chris_data\homework\structured_progamming\student_manage_system\src\consellerinfomanage.h
+	"common.h"
+
+1482157158 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.h
+	"common.h"
+
+1482157232 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.h
+
+1482157195 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.h
+	"common.h"
+
+1482157270 d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.h
+	"common.h"
 
