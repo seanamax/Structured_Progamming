@@ -1,7 +1,7 @@
 #ifndef SMS_H
 #define SMS_H
 
-#include "ConsellerInfoManage.h"
+#include "CounsellorInfoManage.h"
 #include "StudentInfoManage.h"
 #include "StudentMarkManage.h"
 #include "StudentSubjectManage.h"
@@ -22,8 +22,8 @@ struct _SMS
 
     admin Admin;
 
-    conseller *pConseller;
-    size_t consellerLen;
+    counsellor *pCounsellor;
+    size_t counsellorLen;
 };
 
 

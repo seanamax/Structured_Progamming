@@ -49,7 +49,7 @@ bool ReadStudentFile(const fileStruct *const pFileStruct, student **pStudentArra
 // conseller **pConsellerArray 参数指 辅导员数组指针的指针
 // size_t *pLen 参数指 辅导员数组的长度指针
 // 函数返回值 bool 若为真，则读取 辅导员信息 成功， 否则读取失败
-bool ReadConsellerFile(const fileStruct *const pFileStruct, conseller **pConsellerArray, size_t *pLen);
+bool ReadConusellorFile(const fileStruct *const pFileStruct, counsellor **pConsellerArray, size_t *pLen);
 
 
 
@@ -76,10 +76,10 @@ bool SaveStudentFile(const fileStruct *const pFileStruct, const student *const p
 
 // 保存 学生信息
 // const fileStruct *const pFileStruct 参数指 文件系统所必有信息的结构体
-// const conseller *const p 参数指 辅导员数组指针
+// const conseller *const pCounsellor 参数指 辅导员数组指针
 // const size_t len 指 辅导员数组的长度
 // 函数返回值 bool 若为真，则保存辅导员信息成功，否则保存失败
-bool SaveConsellerFile(const fileStruct *const pFileStruct, const conseller *const pconsellerArray, const size_t len);
+bool SaveCounsellorFile(const fileStruct *const pFileStruct, const counsellor *const pCounsellorArray, const size_t len);
 
 
 #endif // FILESYSTEM_H

@@ -12,7 +12,7 @@
 
 typedef struct _subject subject;
 typedef struct _student student;
-typedef struct _conseller conseller;
+typedef struct _counsellor counsellor;
 typedef struct _ID ID;
 typedef struct _admin admin;
 typedef char bool;
@@ -58,7 +58,7 @@ struct _student
 
 
 // 辅导员信息
-struct _conseller
+struct _counsellor
 {
     struct _ID *pID;
     char name[NAME_LEN];

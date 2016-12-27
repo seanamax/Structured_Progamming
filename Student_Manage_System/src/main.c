@@ -5,10 +5,11 @@
 
 int main()
 {
+/*
     SMS sms;
     sms.FileStruct.profile = "./.profile.txt";
     InitSMS(&sms);
     RunSMS(&sms);
-
+*/
     return 0;
 }
