@@ -36,6 +36,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/ConsellerInfoManage.h" />
+		<Unit filename="src/FileSystem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/FileSystem.h" />
 		<Unit filename="src/SMS.c">
 			<Option compilerVar="CC" />
 		</Unit>
