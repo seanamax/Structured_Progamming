@@ -10,13 +10,11 @@ void DeleteStudentInfo(const student *pStudentArray, const size_t len);
 
 
 
-
 // 添加学生信息
 // student **pStudentArray 参数指 学生数组指针的指针
-// const size_t *pConLen 参数指 学生是数组的长度
-// ID **pID 参数指 所有人 ID 数组指针的指针
-// const size_t *pIDLen 参数指 所有人 ID 数组的长度
-void AddStudentInfo(student **pStudentArray, const size_t *pConLen, ID **pID, const size_t *pIDLen);
+// size_t *const pConLen 参数指 学生是数组的长度
+
+void AddStudentInfo(student **pStudentArray, size_t *const pConLen);
 
 
 
@@ -29,9 +27,9 @@ void ChangeStudentInfo(const student *pStudent);
 // 查找学生信息
 // const student *const pStudentArray 参数指学生数组指针
 // const size_t len 参数指 学生数组的长度
-// const size_t *locateIndex  参数 指 找到学生在数组中的下标
+// size_t *const locateIndex  参数 指 找到学生在数组中的下标
 // 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
-bool LocateStudentInfo(const student *const pStudentArray, const size_t len, const size_t *pLocateIndex);
+bool LocateStudentInfo(const student *const pStudentArray, const size_t len, size_t *const pLocateIndex);
 
 
 
@@ -40,9 +38,9 @@ bool LocateStudentInfo(const student *const pStudentArray, const size_t len, con
 // const student *const pStudentArray 参数指学生数组指针
 // const size_t len 参数指 学生数组的长度
 // const ID *const id 参数指 需要找到的学生的ID指针
-// const size_t *locateIndex  参数 指 找到学生在数组中的下标
+// size_t *const locateIndex  参数 指 找到学生在数组中的下标
 // 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
-bool LocateStudentInfoByID(const student *const pStudentArray, const size_t len, const ID *const pID, const size_t *pLocateIndex);
+bool LocateStudentInfoByID(const student *const pStudentArray, const size_t len, const ID *const pID, size_t *const pLocateIndex);
 
 
 
@@ -51,9 +49,9 @@ bool LocateStudentInfoByID(const student *const pStudentArray, const size_t len,
 // const student *const pStudentArray 参数指学生数组指针
 // const size_t len 参数指 学生数组的长度
 // const char *const name 参数指 需要找到的学生的姓名
-// const size_t *pLocateIndex  参数 指 找到学生在数组中的下标
+// size_t *const pLocateIndex  参数 指 找到学生在数组中的下标
 // 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
-bool LocateStudentInfoByName(const student *const pStudentArray, const size_t len, const char *const name, const size_t *pLocateIndex);
+bool LocateStudentInfoByName(const student *const pStudentArray, const size_t len, const char *const name, size_t *const pLocateIndex);
 
 
 

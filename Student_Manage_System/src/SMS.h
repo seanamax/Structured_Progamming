@@ -8,26 +8,14 @@
 #include "UserManage.h"
 #include "FileSystem.h"
 
-
-typedef struct _SMS SMS;
-struct _SMS
-{
-    fileStruct FileStruct;
-
-    student *pStudent;
-    size_t studentLen;
-
-    ID *pID;
-    size_t IDLen;
-
-    admin Admin;
-
-    counsellor *pCounsellor;
-    size_t counsellorLen;
-};
-
-
+// 初始化 SMS
 bool InitSMS(SMS *pSMS);
+
+// 运行 SMS
 void RunSMS(SMS *pSMS);
+
+void RunSMSByCounsellor(SMS *pSMS);
+void RunSMSByAdmin(SMS *pSMS);
+void RunSMSByStudent(SMS *pSMS);
 
 #endif // SMS_H

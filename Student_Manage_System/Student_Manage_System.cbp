@@ -32,10 +32,10 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="src/Common.h" />
-		<Unit filename="src/ConsellerInfoManage.c">
+		<Unit filename="src/CounsellorInfoManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/ConsellerInfoManage.h" />
+		<Unit filename="src/CounsellorInfoManage.h" />
 		<Unit filename="src/FileSystem.c">
 			<Option compilerVar="CC" />
 		</Unit>

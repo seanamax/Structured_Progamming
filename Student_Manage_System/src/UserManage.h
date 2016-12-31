@@ -3,12 +3,26 @@
 
 #include "common.h"
 
-// 登录
-// const ID *const pIDArray 参数指 账号数组
-// const size_t idLen 参数指 账号数组的长度
-// size_t *pIDIndex 参数指 获得 登录正确的账号在账号数组的下标
-// 函数返回值 bool 指是否正确登录， 若是正确登录，该返回值为真，否则为假且 pIDIndex 值不正确
-bool Login(const ID *const pIDArray, const size_t idLen, size_t *pIDIndex);
+// 以学生身份登录认证
+// const student pStudentArray[] 参数指 学生数组
+// const size_t len 参数指 学生数组的长度
+// size_t *const pIndex 参数指认证成功，获得该学生在学生数组中的下标
+// 函数返回值 bool 型，若返回值为真，则表示认证成功，否则失败，pIndex 值无意义
+bool LoginByStudent(const student pStudentArray[], const size_t len, size_t *const pIndex);
+
+
+// 以辅导员身份登录认证
+// const counsellor pCounsellorArray[] 参数指 辅导员数组
+// const size_t len 参数指 辅导员数组的长度
+// size_t *const pIndex 参数指认证成功，获得该辅导员在辅导员数组中的下标
+// 函数返回值 bool 型， 若返回值为真，则表示认证成功，否则失败，pIndex 值无意义
+bool LoginByCounsellor(const counsellor pCounsellorArray[], const size_t len, size_t *const pIndex);
+
+// 以管理员身份登录认证
+// const admin *const pAdmin 参数指 管理员指针
+// 函数返回值 bool 型， 若返回值为真， 则表示认证成功， 否则失败
+bool LoginByAdmin(const admin *const pAdmin);
+
 
 
 // 检查ID 是否一致
@@ -19,8 +33,8 @@ bool CheckID(const ID *const pIDA, const ID *const pIDB);
 
 
 // 修改密码
-// 参数 ID *pID 为待修改的账号指针
-void ChangePassWord(const ID *pID);
+// 参数 ID *const pID 为待修改的账号指针
+void ChangePassWord(ID *const pID);
 
 
 

@@ -1,6 +1,8 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+#include <stdlib.h>
+
 #define NAME_LEN 20
 #define PASSWORD_LEN 20
 #define PHONENUMBER_LEN 20
@@ -9,6 +11,10 @@
 #define ID_LEN 20
 #define CLASS_NAME_LEN 20
 
+#define STRINGBUFFERLEN 256
+
+#define true 1
+#define false 0
 
 typedef struct _subject subject;
 typedef struct _student student;
@@ -47,7 +53,7 @@ struct _class
 // 学生信息
 struct _student
 {
-    struct _ID *pID;
+    struct _ID id;
     char name[NAME_LEN];
     char class[CLASS_NAME_LEN];
     char address[ADDRESS_LEN];
@@ -60,7 +66,7 @@ struct _student
 // 辅导员信息
 struct _counsellor
 {
-    struct _ID *pID;
+    struct _ID id;
     char name[NAME_LEN];
     char address[ADDRESS_LEN];
     struct _class *pClass;
@@ -71,8 +77,39 @@ struct _counsellor
 // 管理员信息
 struct _admin
 {
-    struct _ID *pID;
+    struct _ID id;
 };
+
+
+
+// 文件系统
+typedef struct _fileStruct fileStruct;
+
+struct _fileStruct
+{
+    char adminInfoFile[STRINGBUFFERLEN];
+    char studentInfoFile[STRINGBUFFERLEN];
+    char counsellorInfoFile[STRINGBUFFERLEN];
+    char profile[STRINGBUFFERLEN];
+};
+
+
+// 学生信息管理系统结构体
+typedef struct _SMS SMS;
+struct _SMS
+{
+    fileStruct FileStruct;
+
+    student *pStudent;
+    size_t studentLen;
+
+
+    admin Admin;
+
+    counsellor *pCounsellor;
+    size_t counsellorLen;
+};
+
 
 
 #endif // COMMON_H
