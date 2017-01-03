@@ -31,35 +31,35 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="src/Common.h" />
+		<Unit filename="include/SMS.h" />
+		<Unit filename="include/internal/Common.h" />
+		<Unit filename="include/internal/CounsellorInfoManage.h" />
+		<Unit filename="include/internal/FileSystem.h" />
+		<Unit filename="include/internal/StudentInfoManage.h" />
+		<Unit filename="include/internal/StudentMarkManage.h" />
+		<Unit filename="include/internal/StudentSubjectManage.h" />
+		<Unit filename="include/internal/UserManage.h" />
 		<Unit filename="src/CounsellorInfoManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/CounsellorInfoManage.h" />
 		<Unit filename="src/FileSystem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/FileSystem.h" />
 		<Unit filename="src/SMS.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/SMS.h" />
 		<Unit filename="src/StudentInfoManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/StudentInfoManage.h" />
 		<Unit filename="src/StudentMarkManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/StudentMarkManage.h" />
 		<Unit filename="src/StudentSubjectManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/StudentSubjectManage.h" />
 		<Unit filename="src/UserManage.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/UserManage.h" />
 		<Unit filename="src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
