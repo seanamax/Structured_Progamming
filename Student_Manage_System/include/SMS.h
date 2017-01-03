@@ -1,12 +1,7 @@
 #ifndef SMS_H
 #define SMS_H
 
-#include "CounsellorInfoManage.h"
-#include "StudentInfoManage.h"
-#include "StudentMarkManage.h"
-#include "StudentSubjectManage.h"
-#include "UserManage.h"
-#include "FileSystem.h"
+#include "./internal/common.h"
 
 // ≥ı ºªØ SMS
 bool InitSMS(SMS *pSMS);

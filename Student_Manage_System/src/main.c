@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "SMS.h"
-#include "Common.h"
+#include "../include/internal/Common.h"
+#include "../include/SMS.h"
+
 
 int main()
 {
@@ -11,5 +10,6 @@ int main()
     InitSMS(&sms);
     RunSMS(&sms);
 */
+    UnitTest();
     return 0;
 }
