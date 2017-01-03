@@ -68,5 +68,9 @@ void DispStudentInfo(const student *const pStudent);
 // const size_t conLen 参数指需要显示的学生数组的长度
 void DispAllStudentInfo(const student *const pStudentArray, const size_t conLen);
 
+// 删除 学生数组信息
+// student **pStudentArray 参数指 指向学生数组指针的指针
+// size_t *pLen  参数指 学生数组长度的指针
+void DelStudentArray(student **pStudentArray, size_t *pLen);
 
 #endif // STUDENTINFOMANEGE_H

@@ -17,7 +17,7 @@
 	"SMS.h"
 	"Common.h"
 
-1483165206 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
+1483431497 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
 	"CounsellorInfoManage.h"
 	"StudentInfoManage.h"
 	"StudentMarkManage.h"
@@ -25,35 +25,35 @@
 	"UserManage.h"
 	"FileSystem.h"
 
-1483165954 d:\chris_data\homework\structured_progamming\student_manage_system\src\common.h
+1483431479 d:\chris_data\homework\structured_progamming\student_manage_system\src\common.h
 	<stdlib.h>
 
 1482157214 d:\chris_data\homework\structured_progamming\student_manage_system\src\consellerinfomanage.h
 	"common.h"
 
-1483155481 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.h
+1483431507 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.h
 	"common.h"
 
-1483154034 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.h
+1483431507 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.h
 
-1483154355 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.h
+1483431507 d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.h
 	"common.h"
 
-1483165068 d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.h
+1483431506 d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.h
 	"common.h"
 
-1483166070 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.c
+1483430907 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.c
 	"FileSystem.h"
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<assert.h>
 
-1483165963 d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.h
+1483431492 d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.h
 	"common.h"
 
-1481256817 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
+1483430679 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
 
-1483155688 d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.h
+1483431486 d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.h
 	"common.h"
 

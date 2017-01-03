@@ -64,4 +64,12 @@ void DispCounsellorInfo(const counsellor *const pCounsellor);
 void DispAllCounsellorInfo(const counsellor *const pCounsellorArray, const size_t conLen);
 
 
+
+// 删除 辅导员数组信息
+// counsellor **pCounsellorArray 参数指 指向辅导员数组指针的指针
+// size_t *pLen 参数指 辅导员数组长度的指针
+void DelCounsellorArray(counsellor **pCounsellorArray, size_t *pLen);
+
+
+
 #endif // counsellorINFOMANAGE_H
