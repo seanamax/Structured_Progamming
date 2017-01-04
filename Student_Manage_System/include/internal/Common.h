@@ -2,6 +2,7 @@
 #define COMMON_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #define NAME_LEN 20
 #define PASSWORD_LEN 20
@@ -15,6 +16,7 @@
 
 #define true 1
 #define false 0
+
 
 typedef struct _subject subject;
 typedef struct _student student;

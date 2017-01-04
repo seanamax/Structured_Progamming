@@ -1,4 +1,5 @@
 #include "../include/internal/FileSystem.h"
+#include "../include/internal/BasicFunc.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -6,6 +7,7 @@
 
 bool InitFileSystem(fileStruct *const pFileStruct)
 {
+    assert(pFileStruct && "pFileStruct is null pointer, Please check it out in InitFileSystem !");
     assert(pFileStruct->profile && "profile is null");
 
     FILE *pProfile, *pAdminInfoFile, *pStudentInfoFile, *pCounsellorInfoFile;
@@ -87,7 +89,7 @@ bool ReadStudentFile(const fileStruct *const pFileStruct, student **pStudentArra
         (*pStudentArray)[i].pSubject = (subject *)malloc(sizeof(subject) * (*pStudentArray)[i].subjectNum);
 
 
-        assert(((*pStudentArray)[i].pSubject == NULL && (*pStudentArray)[i].subjectNum != 0) && "Cann't mallocating the memory of student subject!\n");
+        assert(((*pStudentArray)[i].pSubject == NULL || (*pStudentArray)[i].subjectNum != 0) && "Cann't mallocating the memory of student subject!\n");
 
         if((*pStudentArray)[i].pSubject == NULL && (*pStudentArray)[i].subjectNum != 0) {
 

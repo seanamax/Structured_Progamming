@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/SMS.h" />
+		<Unit filename="include/internal/BasicFunc.h" />
 		<Unit filename="include/internal/Common.h" />
 		<Unit filename="include/internal/CounsellorInfoManage.h" />
 		<Unit filename="include/internal/FileSystem.h" />
@@ -39,6 +40,9 @@
 		<Unit filename="include/internal/StudentMarkManage.h" />
 		<Unit filename="include/internal/StudentSubjectManage.h" />
 		<Unit filename="include/internal/UserManage.h" />
+		<Unit filename="src/BasicFunc.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/CounsellorInfoManage.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -4,3 +4,5 @@
 void UnitTest();
 
 void FileSystem_Test();
+
+void StudentMarkManage_Test();
