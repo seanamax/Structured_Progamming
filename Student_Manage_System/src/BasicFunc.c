@@ -2,13 +2,13 @@
 #include "stdio.h"
 
 
-inline PrintSplitLine()
+inline void PrintSplitLine()
 {
     puts("--------------------------------------------------------------");
 }
 
 
-bool YesOrNo()
+inline bool YesOrNo()
 {
     char ch = '0';
     while(ch != 'y' && ch != 'Y' && ch != 'N' && ch != 'n') {

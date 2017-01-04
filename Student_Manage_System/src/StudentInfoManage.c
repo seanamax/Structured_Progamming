@@ -40,7 +40,7 @@ void DispAllStudentInfo(const student *const pStudentArray, const size_t conLen)
     for(i=0; i < conLen; ++i) {
 
         PrintSplitLine();
-        printf("The number of student array is: %u\n", i+1);
+        //printf("The number of student array is: %u\n", i+1);
         DispStudentInfo(pStudentArray + i);
         putchar('\n');
 

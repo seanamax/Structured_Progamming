@@ -4,7 +4,7 @@
 #include "Common.h"
 
 // 打印分割线
-inline PrintSplitLine();
+inline void PrintSplitLine();
 
 
 // 接受用户选择是与否
