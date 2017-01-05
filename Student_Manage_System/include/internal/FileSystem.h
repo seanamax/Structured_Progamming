@@ -30,6 +30,15 @@ bool ReadCounsellorFile(const fileStruct *const pFileStruct, counsellor **pCouns
 
 
 
+// 读取管理员信息
+// const fileStruct *const pFileStruct 参数指 文件系统所必有信息的结构体
+// admin *const pAdmin 参数指 管理员
+// 函数返回值 bool 若为真，则读取 管理员信息 成功， 否则读取失败
+bool ReadAdminFile(const fileStruct *const pFileStruct, admin *const pAdmin);
+
+
+
+
 // 保存 学生信息
 // const fileStruct *const pFileStruct 参数指 文件系统所必有信息的结构体
 // const student *const pStudentArray 参数指 学生数组指针
@@ -48,6 +57,12 @@ bool SaveStudentFile(const fileStruct *const pFileStruct, const student *const p
 bool SaveCounsellorFile(const fileStruct *const pFileStruct, const counsellor *const pCounsellorArray, const size_t len);
 
 
+
+// 保存 管理员信息
+// const fileStruct *const pFileStruct 参数指 文件系统所必有信息的机构体
+// const admin *const pAdmin
+// 函数返回值 bool 若为真，则保存管理员信息成功，否则保存失败
+bool SaveAdminFile(const fileStruct *const pFileStruct, const admin *const pAdmin);
 
 
 

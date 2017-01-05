@@ -23,6 +23,9 @@ typedef struct _student student;
 typedef struct _counsellor counsellor;
 typedef struct _ID ID;
 typedef struct _admin admin;
+typedef struct _class class;
+typedef struct _fileStruct fileStruct;
+typedef struct _SMS SMS;
 typedef char bool;
 
 
@@ -85,8 +88,6 @@ struct _admin
 
 
 // 文件系统
-typedef struct _fileStruct fileStruct;
-
 struct _fileStruct
 {
     char adminInfoFile[STRINGBUFFERLEN];
@@ -97,7 +98,6 @@ struct _fileStruct
 
 
 // 学生信息管理系统结构体
-typedef struct _SMS SMS;
 struct _SMS
 {
     fileStruct FileStruct;

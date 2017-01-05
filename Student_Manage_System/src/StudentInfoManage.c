@@ -46,3 +46,72 @@ void DispAllStudentInfo(const student *const pStudentArray, const size_t conLen)
 
     }
 }
+
+
+
+// 删除 学生数组信息
+// student **pStudentArray 参数指 指向学生数组指针的指针
+// size_t *pLen  参数指 学生数组长度的指针
+void FreeStudentArray(student **pStudentArray, size_t *pLen)
+{
+    assert(pStudentArray && "the pointer is NULL");
+    assert(pLen && "The pointer is NULL");
+
+    int i;
+
+    if(*pLen) {
+        for(i=0; i < *pLen; ++i) {
+            if((*pStudentArray)[i].subjectNum) {
+                free((*pStudentArray)[i].pSubject);
+            }
+        }
+
+        free(*pStudentArray);
+    }
+
+    *pLen = 0;
+    *pStudentArray = NULL;
+}
+
+
+
+// 删除学生信息， 通过 标记 flag 惰性删除
+// student *const pStudentArray 参数指学生数组指针
+// const size_t Len 参数指 学生数组的长度
+void DeleteStudentInfo(student *const pStudentArray, const size_t len)
+{
+    assert(pStudentArray && "the pointer is NULL!");
+
+    char findID[STRINGBUFFERLEN];
+    bool deleteFlag, findFlag;
+    size_t i;
+
+    PrintSplitLine();
+    printf("Please input student ID: ");
+
+    scanf("%s", findID);
+
+    printf("Do you really delete ID: %s ?(y/n)\n", findID);
+
+    deleteFlag = YesOrNo();
+
+    if(deleteFlag) {
+
+        findFlag = false;
+        for(i=0; i < len; ++ i) {
+            if(pStudentArray[i].id.flag && !strcmp(pStudentArray[i].id.id, findID)) {
+                findFlag = true;
+                pStudentArray[i].id.flag = false;
+            }
+        }
+
+        if(findFlag) {
+            puts("Delete success!");
+        }
+        else {
+            puts("Cann't find this ID, please check it out!");
+        }
+    }
+
+    PrintSplitLine();
+}

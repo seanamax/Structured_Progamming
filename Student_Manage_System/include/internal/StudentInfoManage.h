@@ -4,23 +4,22 @@
 #include "common.h"
 
 // 删除学生信息， 通过 标记 flag 惰性删除
-// const student *pStudentArray 参数指学生数组指针
+// student *const pStudentArray 参数指学生数组指针
 // const size_t Len 参数指 学生数组的长度
-void DeleteStudentInfo(const student *pStudentArray, const size_t len);
+void DeleteStudentInfo(student *const pStudentArray, const size_t len);
 
 
 
 // 添加学生信息
 // student **pStudentArray 参数指 学生数组指针的指针
 // size_t *const pConLen 参数指 学生是数组的长度
-
 void AddStudentInfo(student **pStudentArray, size_t *const pConLen);
 
 
 
 // 修改学生信息
-// const student *pStudent 参数指修改当前学生信息
-void ChangeStudentInfo(const student *pStudent);
+// student *const pStudent 参数指修改当前学生信息
+void ChangeStudentInfo(student *const pStudent);
 
 
 
@@ -72,6 +71,6 @@ void DispAllStudentInfo(const student *const pStudentArray, const size_t conLen)
 // 删除 学生数组信息
 // student **pStudentArray 参数指 指向学生数组指针的指针
 // size_t *pLen  参数指 学生数组长度的指针
-void DelStudentArray(student **pStudentArray, size_t *pLen);
+void FreeStudentArray(student **pStudentArray, size_t *pLen);
 
 #endif // STUDENTINFOMANEGE_H

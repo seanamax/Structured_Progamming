@@ -42,6 +42,6 @@ void AddSingleStudentSubjectInfo(student *const pStudent);
 // 修改单个学生科目信息，通过查找该学生的科目信息，如若找到符合的科目信息，则修改。
 // student pStudent[] 参数指 学生指针
 // 函数返回值 bool 若为真， 则修改成功，否则修改失败或没有找到符合的科目
-bool ChangeSingleStudentSubjectInfo(student pStudentArray[]);
+bool ChangeSingleStudentSubjectInfo(student *const pStudent);
 
 #endif // StudentSubjectSUBJECTMANAGE_H
