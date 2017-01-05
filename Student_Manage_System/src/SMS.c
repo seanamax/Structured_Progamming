@@ -53,42 +53,24 @@ void RunSMS(SMS *pSMS)
     switch(ch) {
     case '1': {
         RunSMSByStudent(pSMS);
+        SaveSMS(pSMS);
         break;
     }
 
     case '2': {
         RunSMSByCounsellor(pSMS);
+        SaveSMS(pSMS);
         break;
     }
 
     case '3': {
         RunSMSByAdmin(pSMS);
+        SaveSMS(pSMS);
         break;
     }
 
     case '4': {
-        while(!SaveAdminFile(&pSMS->FileStruct, &pSMS->Admin)) {
-            assert("Cann't save ADMIN file, please check it out!");
-            puts("Cann't save ADMIN file, please check it out!");
-            getchar();
-        }
-
-        while(!SaveCounsellorFile(&pSMS->FileStruct, pSMS->pCounsellor, pSMS->counsellorLen)) {
-            assert("Cann't save COUNSELLOR file, please check it out!");
-            puts("Cann't save COUNSELLOR file, please check it out!");
-            getchar();
-        }
-
-
-        while(!SaveStudentFile(&pSMS->FileStruct, pSMS->pStudent, pSMS->studentLen)) {
-            assert("Cann't save STUDENT file, please check it out!");
-            puts("Cann't save STUDENT file, please check it out!");
-            getchar();
-        }
-
-        FreeCounsellorArray(&pSMS->pCounsellor, &pSMS->counsellorLen);
-        FreeStudentArray(&pSMS->pStudent, &pSMS->studentLen);
-
+        SaveSMS(pSMS);
         break;
     }
 
@@ -98,9 +80,44 @@ void RunSMS(SMS *pSMS)
     }
 }
 
+void SaveSMS(SMS *pSMS)
+{
+    while(!SaveAdminFile(&pSMS->FileStruct, &pSMS->Admin)) {
+        assert("Cann't save ADMIN file, please check it out!");
+        puts("Cann't save ADMIN file, please check it out!");
+        getchar();
+    }
+
+    while(!SaveCounsellorFile(&pSMS->FileStruct, pSMS->pCounsellor, pSMS->counsellorLen)) {
+        assert("Cann't save COUNSELLOR file, please check it out!");
+        puts("Cann't save COUNSELLOR file, please check it out!");
+        getchar();
+    }
+
+
+    while(!SaveStudentFile(&pSMS->FileStruct, pSMS->pStudent, pSMS->studentLen)) {
+        assert("Cann't save STUDENT file, please check it out!");
+        puts("Cann't save STUDENT file, please check it out!");
+        getchar();
+    }
+
+    FreeCounsellorArray(&pSMS->pCounsellor, &pSMS->counsellorLen);
+    FreeStudentArray(&pSMS->pStudent, &pSMS->studentLen);
+
+}
 
 void RunSMSByAdmin(SMS *pSMS)
 {
+    bool loginFlag;
+
+    loginFlag = LoginByAdmin(&pSMS->Admin);
+    if(loginFlag) {
+        PrintSplitLine();
+        puts("\t\t----  Admin Mode   ----");
+        puts("[1]. Manage student.");
+        puts("[2]. Manage counsellor.");
+        puts("[3]. Change your password.");
+    }
 
 }
 

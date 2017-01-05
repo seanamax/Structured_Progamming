@@ -30,6 +30,9 @@ void DispStudentInfo(const student *const pStudent)
 }
 
 
+
+
+
 // 显示所有学生信息
 // const student *pStudentArray 参数指需要显示的学生数组指针
 // const size_t conLen 参数指需要显示的学生数组的长度
@@ -46,6 +49,8 @@ void DispAllStudentInfo(const student *const pStudentArray, const size_t conLen)
 
     }
 }
+
+
 
 
 
@@ -72,6 +77,8 @@ void FreeStudentArray(student **pStudentArray, size_t *pLen)
     *pLen = 0;
     *pStudentArray = NULL;
 }
+
+
 
 
 
@@ -115,6 +122,8 @@ void DeleteStudentInfo(student *const pStudentArray, const size_t len)
 
     PrintSplitLine();
 }
+
+
 
 
 
@@ -201,6 +210,8 @@ void AddStudentInfo(student **pStudentArray, size_t *const pConLen)
 }
 
 
+
+
 // 修改学生信息
 // student *const pStudent 参数指修改当前学生信息
 void ChangeStudentInfo(student *const pStudent)
@@ -285,6 +296,7 @@ bool LocateStudentInfoByID(const student *const pStudentArray, const size_t len,
 
 
 
+
 // 通过 姓名 查找学生信息
 // const student *const pStudentArray 参数指学生数组指针
 // const size_t len 参数指 学生数组的长度
@@ -308,6 +320,7 @@ bool LocateStudentInfoByName(const student *const pStudentArray, const size_t le
 
 
 
+
 // 查找学生信息
 // const student *const pStudentArray 参数指学生数组指针
 // const size_t len 参数指 学生数组的长度
@@ -321,6 +334,7 @@ bool LocateStudentInfo(const student *const pStudentArray, const size_t len, siz
     size_t chooseMode;
     char inputBuffer[STRINGBUFFERLEN];
     char inputFlag;
+    ID id;
 
     PrintSplitLine();
     puts("Choose the mode how to locating information of students");
@@ -349,7 +363,8 @@ bool LocateStudentInfo(const student *const pStudentArray, const size_t len, siz
         PrintSplitLine();
         puts("Please input the student's ID.");
         scanf("%s", inputBuffer);
-        return LocateStudentInfoByID(pStudentArray, len, inputBuffer, pLocateIndex);
+        strcpy(id.id, inputBuffer);
+        return LocateStudentInfoByID(pStudentArray, len, &id, pLocateIndex);
 
     case 3:
         return false;

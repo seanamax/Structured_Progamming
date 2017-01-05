@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1481256817 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\consellerinfomanage.c
 
-1483587273 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.c
+1483620247 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.c
 	"../include/SMS.h"
 	"../include/internal/CounsellorInfoManage.h"
 	"../include/internal/StudentInfoManage.h"
@@ -12,16 +12,18 @@
 	<assert.h>
 	<stdio.h>
 
-1483601339 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.c
+1483618624 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentinfomanage.c
 	"../include/internal/StudentInfoManage.h"
 	"../include/internal/BasicFunc.h"
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
 
-1481256709 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.c
+1483619874 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.c
+	"../include/internal/StudentMarkManage.h"
 
-1481256748 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.c
+1483619976 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.c
+	"../include/internal/StudentSubjectManage.h"
 
 1481256133 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.c
 
@@ -65,7 +67,7 @@
 1483431492 d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.h
 	"common.h"
 
-1483588777 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
+1483620046 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
 	"../include/internal/CounsellorInfoManage.h"
 	"../include/internal/BasicFunc.h"
 	<stdio.h>
@@ -82,7 +84,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1483434772 d:\chris_data\homework\structured_progamming\student_manage_system\include\sms.h
+1483619666 d:\chris_data\homework\structured_progamming\student_manage_system\include\sms.h
 	"./internal/common.h"
 
 1483583457 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\counsellorinfomanage.h
@@ -91,7 +93,8 @@
 1483599882 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\studentinfomanage.h
 	"common.h"
 
-1483154034 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\studentmarkmanage.h
+1483619896 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\studentmarkmanage.h
+	"Common.h"
 
 1483582819 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\studentsubjectmanage.h
 	"common.h"
@@ -111,7 +114,7 @@
 	"../../include/internal/FileSystem.h"
 	<stdio.h>
 
-1483597076 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\unittest.c
+1483619329 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\unittest.c
 	"../include/UnitTest.h"
 
 1483435405 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\counsellorinfomanage_test.c
@@ -121,7 +124,7 @@
 	"../include/UnitTest.h"
 	<assert.h>
 
-1483601257 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentinfomanage_test.c
+1483618919 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentinfomanage_test.c
 	"../include/UnitTest.h"
 	<stdio.h>
 	<assert.h>

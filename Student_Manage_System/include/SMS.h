@@ -12,5 +12,6 @@ void RunSMS(SMS *pSMS);
 void RunSMSByCounsellor(SMS *pSMS);
 void RunSMSByAdmin(SMS *pSMS);
 void RunSMSByStudent(SMS *pSMS);
+void SaveSMS(SMS *pSMS);
 
 #endif // SMS_H
