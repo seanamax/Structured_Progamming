@@ -115,3 +115,295 @@ void DeleteStudentInfo(student *const pStudentArray, const size_t len)
 
     PrintSplitLine();
 }
+
+
+
+// 添加学生信息
+// student **pStudentArray 参数指 学生数组指针的指针
+// size_t *const pConLen 参数指 学生是数组的长度
+void AddStudentInfo(student **pStudentArray, size_t *const pConLen)
+{
+    assert(pStudentArray && "The pointer is NULL");
+    assert(pConLen && "The pointer is NULL");
+
+    size_t i;
+    student inputStudent;
+    bool addStudentFlag, findDeletedStudentFlag;
+
+    PrintSplitLine();
+    printf("input the ID: ");
+    scanf("%s", inputStudent.id.id);
+
+    printf("input the password: ");
+    scanf("%s", inputStudent.id.password);
+
+    inputStudent.id.flag = true;
+
+    printf("input the name: ");
+    scanf("%s", inputStudent.name);
+
+    printf("input what class hs is belong to: ");
+    scanf("%s", inputStudent.class);
+
+    printf("input address: ");
+    scanf("%s", inputStudent.address);
+
+    printf("input phone-number: ");
+    scanf("%s", inputStudent.phoneNumber);
+
+    printf("input the number of subject: ");
+    scanf("%u", &inputStudent.subjectNum);
+
+    inputStudent.pSubject = (subject *)malloc(inputStudent.subjectNum * sizeof(subject));
+    assert(!(inputStudent.subjectNum != 0 && inputStudent.pSubject == NULL)
+           && "Cann't alloc the class memory in AddStudentInfo function!");
+
+    for(i=0; i < inputStudent.subjectNum; ++i) {
+        printf("input the subject: ");
+        scanf("%s", inputStudent.pSubject[i].name);
+
+        printf("input mark of %s: ", inputStudent.pSubject[i].name);
+        scanf("%f", &inputStudent.pSubject[i].mark);
+
+        inputStudent.pSubject[i].flag = true;
+    }
+
+    puts("Do you really add this student ? y/n");
+    addStudentFlag = true;//YesOrNo();
+
+    if(addStudentFlag) {
+
+        findDeletedStudentFlag = false;
+        for(i=0; i < *pConLen; ++i) {
+            if(!(*pStudentArray[i]).id.flag) {
+                findDeletedStudentFlag = true;
+                free((*pStudentArray)[i].pSubject);
+                (*pStudentArray)[i] = inputStudent;
+                break;
+            }
+        }
+
+        if(!findDeletedStudentFlag) {
+            *pStudentArray = realloc(*pStudentArray, (*pConLen + 1) * sizeof(student));
+
+            assert(*pStudentArray && "Cann't realloc the memory of student array");
+
+            (*pStudentArray)[*pConLen] = inputStudent;
+
+            *pConLen += 1;
+        }
+    }
+
+    else {
+        free(inputStudent.pSubject);
+    }
+
+}
+
+
+// 修改学生信息
+// student *const pStudent 参数指修改当前学生信息
+void ChangeStudentInfo(student *const pStudent)
+{
+    assert(pStudent && "the pointer is NULL");
+
+    student inputStudent;
+    size_t i;
+    bool changeFlag;
+
+    inputStudent = *pStudent;
+    DispStudentInfo(pStudent);
+
+    PrintSplitLine();
+    printf("Do you change the name ? y/n  ");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        printf("input the name: ");
+        scanf("%s", inputStudent.name);
+    }
+
+    printf("Do you change the id ? y/n  ");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        printf("input the id: ");
+        scanf("%s", inputStudent.id.id);
+    }
+
+    printf("Do you change the address ? y/n  ");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        printf("input the address: ");
+        scanf("%s", inputStudent.address);
+    }
+
+    printf("Do you change the class? y/n  ");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        printf("input the class: ");
+        scanf("%s", inputStudent.class);
+    }
+
+
+    printf("Do you change the phone-number ? y/n  ");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        printf("input the phone-number: ");
+        scanf("%s", inputStudent.phoneNumber);
+    }
+
+    puts("Do you really change for these ? y/n");
+    changeFlag = YesOrNo();
+    if(changeFlag) {
+        *pStudent = inputStudent;
+    }
+}
+
+
+
+
+// 通过 ID 查找学生信息
+// const student *const pStudentArray 参数指学生数组指针
+// const size_t len 参数指 学生数组的长度
+// const ID *const id 参数指 需要找到的学生的ID指针
+// size_t *const locateIndex  参数 指 找到学生在数组中的下标
+// 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
+bool LocateStudentInfoByID(const student *const pStudentArray, const size_t len, const ID *const pID, size_t *const pLocateIndex)
+{
+    assert(pStudentArray && "the pointer is NULL");
+    assert(pID && "the pointer is NULL");
+
+    size_t i;
+    for(i=0; i < len; ++i) {
+        if(pStudentArray[i].id.flag && !strcmp(pID->id, pStudentArray[i].id.id)) {
+            *pLocateIndex = i;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+
+// 通过 姓名 查找学生信息
+// const student *const pStudentArray 参数指学生数组指针
+// const size_t len 参数指 学生数组的长度
+// const char *const name 参数指 需要找到的学生的姓名
+// size_t *const pLocateIndex  参数 指 找到学生在数组中的下标
+// 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
+bool LocateStudentInfoByName(const student *const pStudentArray, const size_t len, const char *const name, size_t *const pLocateIndex)
+{
+    assert(pStudentArray && "the pointer is NULL");
+
+    size_t i;
+    for(i=0; i < len; ++i) {
+        if(pStudentArray[i].id.flag && !strcmp(name, pStudentArray[i].name)) {
+            *pLocateIndex = i;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+
+// 查找学生信息
+// const student *const pStudentArray 参数指学生数组指针
+// const size_t len 参数指 学生数组的长度
+// size_t *const locateIndex  参数 指 找到学生在数组中的下标
+// 函数返回值 bool 值 指是否在学生数组中找到该学生信息，若没有找到，locateIndex 值没有意义
+bool LocateStudentInfo(const student *const pStudentArray, const size_t len, size_t *const pLocateIndex)
+{
+    assert(pStudentArray && "the pointer is NULL");
+    assert(pLocateIndex && "the pointer is NULL");
+
+    size_t chooseMode;
+    char inputBuffer[STRINGBUFFERLEN];
+    char inputFlag;
+
+    PrintSplitLine();
+    puts("Choose the mode how to locating information of students");
+    puts("[1]. Student's name.");
+    puts("[2]. Student's ID.");
+    puts("[3]. Cancel.");
+
+    chooseMode = 0;
+    while(chooseMode != 1 && chooseMode != 2 && chooseMode != 3) {
+        inputFlag  = scanf("%u", &chooseMode);
+        if(inputFlag != 1) {
+            getchar();
+        }
+    }
+
+    switch(chooseMode) {
+
+    case 1:
+        PrintSplitLine();
+        puts("Please input the student's name.");
+        scanf("%s", inputBuffer);
+        return LocateStudentInfoByName(pStudentArray, len, inputBuffer, pLocateIndex);
+
+
+    case 2:
+        PrintSplitLine();
+        puts("Please input the student's ID.");
+        scanf("%s", inputBuffer);
+        return LocateStudentInfoByID(pStudentArray, len, inputBuffer, pLocateIndex);
+
+    case 3:
+        return false;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

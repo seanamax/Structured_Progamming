@@ -10,6 +10,7 @@ int main()
     InitSMS(&sms);
     RunSMS(&sms);
 */
+    //freopen("1.txt", "rw+", stdin);
     UnitTest();
     return 0;
 }
