@@ -34,7 +34,7 @@ bool CheckID(const ID *const pIDA, const ID *const pIDB);
 
 // 修改密码
 // 参数 ID *const pID 为待修改的账号指针
-void ChangePassWord(ID *const pID);
+void ChangePassword(ID *const pID);
 
 
 

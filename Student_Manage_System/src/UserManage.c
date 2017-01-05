@@ -9,6 +9,7 @@
 // 函数返回值 bool 型，若返回值为真，则表示认证成功，否则失败，pIndex 值无意义
 bool LoginByStudent(const student pStudentArray[], const size_t len, size_t *const pIndex)
 {
+    *pIndex = 0;
     return true;
 }
 
@@ -20,6 +21,7 @@ bool LoginByStudent(const student pStudentArray[], const size_t len, size_t *con
 // 函数返回值 bool 型， 若返回值为真，则表示认证成功，否则失败，pIndex 值无意义
 bool LoginByCounsellor(const counsellor pCounsellorArray[], const size_t len, size_t *const pIndex)
 {
+    *pIndex = 0;
     return true;
 }
 
@@ -49,7 +51,7 @@ bool CheckID(const ID *const pIDA, const ID *const pIDB)
 
 // 修改密码
 // 参数 ID *const pID 为待修改的账号指针
-void ChangePassWord(ID *const pID)
+void ChangePassword(ID *const pID)
 {
 
 }

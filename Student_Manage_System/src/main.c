@@ -1,6 +1,6 @@
 #include "../include/internal/Common.h"
 #include "../include/SMS.h"
-
+#include "../test/include/UnitTest.h"
 
 int main()
 {

@@ -44,4 +44,5 @@ void AddSingleStudentSubjectInfo(student *const pStudent);
 // 函数返回值 bool 若为真， 则修改成功，否则修改失败或没有找到符合的科目
 bool ChangeSingleStudentSubjectInfo(student *const pStudent);
 
+
 #endif // StudentSubjectSUBJECTMANAGE_H

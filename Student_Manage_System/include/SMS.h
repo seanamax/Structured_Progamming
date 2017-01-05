@@ -14,4 +14,14 @@ void RunSMSByAdmin(SMS *pSMS);
 void RunSMSByStudent(SMS *pSMS);
 void SaveSMS(SMS *pSMS);
 
+
+void StudentInfoManageModule(SMS *pSMS);
+
+void StudentMarkManageModule(SMS *pSMS);
+
+void StudentSubjectModule(SMS *pSMS);
+
+void CounsellorInfoManageModule(SMS *pSMS);
+
+
 #endif // SMS_H
