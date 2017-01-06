@@ -178,7 +178,7 @@ void AddStudentInfo(student **pStudentArray, size_t *const pConLen)
     }
 
     puts("Do you really add this student ? y/n");
-    addStudentFlag = true;//YesOrNo();
+    addStudentFlag = YesOrNo();
 
     if(addStudentFlag) {
 

@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1481256817 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\consellerinfomanage.c
 
-1483643960 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.c
+1483674081 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.c
 	"../include/SMS.h"
 	"../include/internal/CounsellorInfoManage.h"
 	"../include/internal/StudentInfoManage.h"
@@ -21,19 +21,38 @@
 	<stdlib.h>
 	<assert.h>
 
-1483619874 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.c
+1483674428 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentmarkmanage.c
 	"../include/internal/StudentMarkManage.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
 
-1483619976 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.c
+1483671371 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\studentsubjectmanage.c
 	"../include/internal/StudentSubjectManage.h"
+	"../include/internal/BasicFunc.h"
+	"../include/internal/StudentInfoManage.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<malloc.h>
+	<assert.h>
 
-1483636072 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.c
+1483672269 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\usermanage.c
 	"../include/internal/UserManage.h"
+	"../include/internal/Common.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
 
-1483637009 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\main.c
+1483671706 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\main.c
 	"../include/internal/Common.h"
 	"../include/SMS.h"
 	"../test/include/UnitTest.h"
+	<string.h>
 
 1483431497 d:\chris_data\homework\structured_progamming\student_manage_system\src\sms.h
 	"CounsellorInfoManage.h"
@@ -71,10 +90,11 @@
 1483431492 d:\chris_data\homework\structured_progamming\student_manage_system\src\filesystem.h
 	"common.h"
 
-1483620046 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
+1483672030 source:d:\chris_data\homework\structured_progamming\student_manage_system\src\counsellorinfomanage.c
 	"../include/internal/CounsellorInfoManage.h"
-	"../include/internal/BasicFunc.h"
+	"../include/internal/Common.h"
 	<stdio.h>
+	<math.h>
 	<stdlib.h>
 	<assert.h>
 
@@ -118,11 +138,13 @@
 	"../../include/internal/FileSystem.h"
 	<stdio.h>
 
-1483619329 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\unittest.c
+1483671418 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\unittest.c
 	"../include/UnitTest.h"
 
-1483435405 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\counsellorinfomanage_test.c
+1483672066 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\counsellorinfomanage_test.c
 	"../include/UnitTest.h"
+	<stdio.h>
+	<assert.h>
 
 1483644026 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\sms_test.c
 	"../include/UnitTest.h"
@@ -142,12 +164,15 @@
 	<stdio.h>
 	<assert.h>
 
-1483454604 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentmarkmanage_test.c
+1483671472 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentmarkmanage_test.c
 	"../include/UnitTest.h"
 	"../../include/internal/StudentMarkManage.h"
+	<assert.h>
 
-1483435466 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentsubjectmanage_test.c
+1483671506 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\studentsubjectmanage_test.c
 	"../include/UnitTest.h"
+	"../../include/internal/StudentSubjectManage.h"
+	<assert.h>
 
 1483435472 source:d:\chris_data\homework\structured_progamming\student_manage_system\test\src\usermanage_test.c
 	"../include/UnitTest.h"

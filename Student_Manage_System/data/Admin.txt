@@ -1,2 +1,2 @@
-name_test
-password_test
+test_id
+test_password

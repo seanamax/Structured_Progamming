@@ -39,48 +39,57 @@ bool InitSMS(SMS *pSMS)
 
 void RunSMS(SMS *pSMS)
 {
-    PrintSplitLine();
-    puts("There are 3 mode you have to choose!");
-    puts("[1] Student Mode");
-    puts("[2] Counsellor Mode");
-    puts("[3] Admin Mode");
-    puts("[4] Exit");
-    PrintSplitLine();
 
     char ch = '0';
-    while(ch != '1' && ch != '2' && ch != '3' && ch != '4') {
-        ch = getchar();
-    }
+    while(ch != '4') {
 
-    switch(ch) {
-    case '1': {
-        RunSMSByStudent(pSMS);
-        SaveSMS(pSMS);
-        break;
-    }
+        PrintSplitLine();
+        puts("There are 3 mode you have to choose!");
+        puts("[1] Student Mode");
+        puts("[2] Counsellor Mode");
+        puts("[3] Admin Mode");
+        puts("[4] Exit");
+        PrintSplitLine();
 
-    case '2': {
-        RunSMSByCounsellor(pSMS);
-        SaveSMS(pSMS);
-        break;
-    }
+        ch = '0';
+        while(ch < '1' || ch > '4') {
+            ch = getchar();
+        }
 
-    case '3': {
-        RunSMSByAdmin(pSMS);
-        SaveSMS(pSMS);
-        break;
-    }
+        switch(ch) {
+        case '1': {
+            RunSMSByStudent(pSMS);
 
-    case '4': {
-        SaveSMS(pSMS);
-        break;
-    }
+            break;
+        }
 
-    default:
-        assert(0);
-        break;
+
+        case '2': {
+            RunSMSByCounsellor(pSMS);
+
+            break;
+        }
+
+
+        case '3': {
+            RunSMSByAdmin(pSMS);
+
+            break;
+        }
+
+
+        case '4': {
+
+            break;
+        }
+
+
+        default:
+            break;
+        }
     }
 }
+
 
 void SaveSMS(SMS *pSMS)
 {
@@ -118,7 +127,7 @@ void RunSMSByAdmin(SMS *pSMS)
     loginFlag = LoginByAdmin(&pSMS->Admin);
     while(loginFlag) {
 
-        system("cls");
+        //system("cls");
         PrintSplitLine();
         puts("\t\t--- Admin Mode ---");
         puts("[1]. Student information manage.");
@@ -126,7 +135,7 @@ void RunSMSByAdmin(SMS *pSMS)
         puts("[3]. Student subject manage.");
         puts("[4]. Counsellor information manage.");
         puts("[5]. Change the password.");
-        puts("[6]. Exit.");
+        puts("[6]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
@@ -200,14 +209,14 @@ void RunSMSByCounsellor(SMS *pSMS)
     loginFlag = LoginByCounsellor(pSMS->pCounsellor, pSMS->counsellorLen, &index);
     while(loginFlag) {
 
-        system("cls");
+        //system("cls");
         PrintSplitLine();
         puts("\t\t--- Counsellor Mode ---");
         puts("[1]. Student mark manage.");
         puts("[2]. Show the information.");
         puts("[3]. Change the information.");
         puts("[4]. Change password.");
-        puts("[5]. Exit.");
+        puts("[5]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
@@ -276,13 +285,13 @@ void RunSMSByStudent(SMS *pSMS)
     loginFlag = LoginByCounsellor(pSMS->pCounsellor, pSMS->counsellorLen, &index);
     while(loginFlag) {
 
-        system("cls");
+        //system("cls");
         PrintSplitLine();
         puts("\t\t--- Student Mode ---");
         puts("[1]. Show the information.");
         puts("[2]. Change the information.");
         puts("[3]. Change the password.");
-        puts("[4]. Exit.");
+        puts("[4]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
@@ -299,8 +308,7 @@ void RunSMSByStudent(SMS *pSMS)
 
         case 1:
             DispStudentInfo(pSMS->pStudent + index);
-            getchar();
-            getchar();
+
             break;
 
 
@@ -320,7 +328,7 @@ void RunSMSByStudent(SMS *pSMS)
 
 
         case 4:
-            loginFlag = true;
+            loginFlag = false;
 
             break;
 
@@ -351,11 +359,11 @@ void StudentInfoManageModule(SMS *pSMS)
         puts("[2]. Locate student information.");
         puts("[3]. Change student information.");
         puts("[4]. Add student information.");
-        puts("[5]. Exit.");
+        puts("[5]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
-        while(choice == 0 || choice > 4) {
+        while(choice == 0 || choice > 5) {
             inputFlag = scanf("%u", &choice);
 
             if(!inputFlag) {
@@ -409,7 +417,6 @@ void StudentInfoManageModule(SMS *pSMS)
 
 
         case 5:
-            choice = 5;
 
             break;
 
@@ -436,7 +443,7 @@ void StudentMarkManageModule(SMS *pSMS)
         puts("\t\t--- Student Mark Manage ---");
         puts("[1]. Add mark to student.");
         puts("[2]. Change mark to student.");
-        puts("[3]. Exit.");
+        puts("[3]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
@@ -483,7 +490,6 @@ void StudentMarkManageModule(SMS *pSMS)
 
 
         case 3:
-            choice = 3;
 
             break;
 
@@ -613,7 +619,6 @@ void StudentSubjectModule(SMS *pSMS)
 
 
         case 7:
-            choice = 7;
 
             break;
 
@@ -644,11 +649,11 @@ void CounsellorInfoManageModule(SMS *pSMS)
         puts("[2]. Locate Counsellor information.");
         puts("[3]. Change Counsellor information.");
         puts("[4]. Add Counsellor information.");
-        puts("[5]. Exit.");
+        puts("[5]. Cancel.");
         PrintSplitLine();
 
         choice = 0;
-        while(choice == 0 || choice > 4) {
+        while(choice == 0 || choice > 5) {
             inputFlag = scanf("%u", &choice);
 
             if(!inputFlag) {
@@ -702,7 +707,6 @@ void CounsellorInfoManageModule(SMS *pSMS)
 
 
         case 5:
-            choice = 5;
 
             break;
 
