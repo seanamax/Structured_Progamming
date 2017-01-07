@@ -20,7 +20,7 @@ void SMS_Test()
     //StudentInfoManageModule_Test();
     //StudentMarkManageModule_Test();
     //StudentSubjectModule_Test();
-    CounsellorInfoManageModule_Test();
+    //CounsellorInfoManageModule_Test();
 }
 
 

@@ -169,7 +169,7 @@ void DeleteSingleStudentSubjectInfo(student *const pStudent)
 {
     assert(pStudent && "Can't find the student!\n");
 
-    size_t i,j,b;
+    size_t j,b;
     char a[STRINGBUFFERLEN];
 
     PrintSplitLine();
@@ -285,6 +285,7 @@ bool ChangeSingleStudentSubjectInfo(student *const pStudent)
     if(b == true)
     {
         puts("Are you sure modify the subject's mark for '0'? y/n\n");
+        setZeroFlag = YesOrNo();
 
         for(j=0 ; j < pStudent -> subjectNum ; ++j)
             {

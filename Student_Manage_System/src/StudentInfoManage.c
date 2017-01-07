@@ -2,6 +2,7 @@
 #include "../include/internal/BasicFunc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 // 显示学生信息
@@ -15,7 +16,48 @@ void DispStudentInfo(const student *const pStudent)
     PrintSplitLine();
     printf("ID: %s\n", pStudent->id.id);
     printf("Name: %s\n", pStudent->name);
-    printf("Belong to Class: %s\n", pStudent->class);
+    printf("Sex: %s\n", pStudent->sex == Male ? "male" : "female");
+    printf("Native place: %s\n", pStudent->nativePlace);
+    printf("Birthday: %s\n", pStudent->birthday);
+    printf("Major: %s\n", pStudent->major);
+    printf("Year of enrollment: %s\n", pStudent->YearOfEnrollment);
+    printf("Class: %s\n", pStudent->class);
+
+    printf("Status: ");
+    switch(pStudent->status) {
+
+    case Be_Studying_At_School:
+        puts("Be studying at school");
+
+        break;
+
+
+
+    case Suspension_of_Schooling:
+        puts("Suspension of schooling");
+
+        break;
+
+
+
+    case Leavel_School:
+        puts("Leavel school");
+
+        break;
+
+
+
+    case Serve_in_Army:
+        puts("Serve in army");
+
+        break;
+
+
+    default:
+        puts("none\n");
+        break;
+    }
+
     printf("Address: %s\n", pStudent->address);
     printf("Phone-Number: %s\n", pStudent->phoneNumber);
     puts("The subject(s) of he/she follow:");
@@ -136,6 +178,7 @@ void AddStudentInfo(student **pStudentArray, size_t *const pConLen)
     assert(pConLen && "The pointer is NULL");
 
     size_t i;
+    bool inputFlag;
     student inputStudent;
     bool addStudentFlag, findDeletedStudentFlag;
 
@@ -151,8 +194,71 @@ void AddStudentInfo(student **pStudentArray, size_t *const pConLen)
     printf("input the name: ");
     scanf("%s", inputStudent.name);
 
+    printf("choose male or female to sex. Y is male and N is female. ");
+    if(YesOrNo()) {
+        inputStudent.sex = Male;
+    }
+    else {
+        inputStudent.sex = Female;
+    }
+
+    printf("input the native place: ");
+    scanf("%s", inputStudent.nativePlace);
+
+    printf("input the birthday: ");
+    scanf("%s", inputStudent.birthday);
+
+    printf("input the major: ");
+    scanf("%s", inputStudent.major);
+
+    printf("input the year of enrollment: ");
+    scanf("%s", inputStudent.YearOfEnrollment);
+
     printf("input what class hs is belong to: ");
     scanf("%s", inputStudent.class);
+
+    puts("choose status to the student:");
+    puts("[1]. Be studying at school.");
+    puts("[2]. Suspension of schooling.");
+    puts("[3]. Leavel school.");
+    puts("[4]. Serve in army.");
+
+    i=0;
+    while(i == 0 || i > 4) {
+        inputFlag = scanf("%u", &i);
+        if(inputFlag != 1) {
+            getchar();
+        }
+    }
+
+    switch(i) {
+    case 1:
+        inputStudent.status = Be_Studying_At_School;
+
+        break;
+
+
+
+    case 2:
+        inputStudent.status = Suspension_of_Schooling;
+
+        break;
+
+
+
+    case 3:
+        inputStudent.status = Leavel_School;
+
+        break;
+
+
+    case 4:
+        inputStudent.status = Serve_in_Army;
+
+
+    default:
+        break;
+    }
 
     printf("input address: ");
     scanf("%s", inputStudent.address);
@@ -219,7 +325,6 @@ void ChangeStudentInfo(student *const pStudent)
     assert(pStudent && "the pointer is NULL");
 
     student inputStudent;
-    size_t i;
     bool changeFlag;
 
     inputStudent = *pStudent;
@@ -370,7 +475,7 @@ bool LocateStudentInfo(const student *const pStudentArray, const size_t len, siz
         return false;
     }
 
-
+    return false;
 }
 
 

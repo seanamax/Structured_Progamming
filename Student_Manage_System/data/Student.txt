@@ -1,17 +1,35 @@
 2
 
-test_id test_password
-test_name test_class
-test_address test_phoneNumber
+test_id
+test_password
+test_name
+1
+test_native_place
+test_birthday
+test_major
+test_year_of_enrollment
+test_class
+1
+test_address
+test_phone-number
 3
-test_subject1 89.90
-test_subject2 90.10
-test_subject3 91.40
+test_subject1 	11.0
+test_subject2	22.0
+test_subject3	33.0
 
-test_id test_password
-test_name test_class
-test_address test_phoneNumber
+test_id2
+test_password
+test_name
+1
+test_native_place
+test_birthday
+test_major
+test_year_of_enrollment
+test_class
+1
+test_address
+test_phone-number
 2
-test_subject2 90.10
-test_subject3 91.40
+test_subject1 	11.0
+test_subject2	22.0
 

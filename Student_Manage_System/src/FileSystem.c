@@ -35,14 +35,14 @@ bool InitFileSystem(fileStruct *const pFileStruct)
     pStudentInfoFile = fopen(pFileStruct->studentInfoFile, "r");
     pCounsellorInfoFile = fopen(pFileStruct->counsellorInfoFile, "r");
 
-    if(!(pAdminInfoFile && pStudentInfoFile && pCounsellorInfoFile)) {
-        return false;
-    }
-
-
     assert(pAdminInfoFile && "Cann't open the file of user-manage, please check it out!");
     assert(pStudentInfoFile && "Cann't open the file of student information, please check it out!");
     assert(pCounsellorInfoFile && "Cann't open the file of counsellor information, please check it out!");
+
+
+    if(!(pAdminInfoFile && pStudentInfoFile && pCounsellorInfoFile)) {
+        return false;
+    }
 
     fclose(pProfile);
     fclose(pAdminInfoFile);
@@ -93,7 +93,11 @@ bool ReadStudentFile(const fileStruct *const pFileStruct, student **pStudentArra
     for(i=0; i < *pLen; ++ i) {
         (*pStudentArray)[i].id.flag = true;
         fscanf(fp, "%s %s", (*pStudentArray)[i].id.id, (*pStudentArray)[i].id.password);
-        fscanf(fp, "%s %s", (*pStudentArray)[i].name, (*pStudentArray)[i].class);
+        fscanf(fp, "%s", (*pStudentArray)[i].name);
+        fscanf(fp, "%u %s", &(*pStudentArray)[i].sex, (*pStudentArray)[i].nativePlace);
+        fscanf(fp, "%s %s", (*pStudentArray)[i].birthday, (*pStudentArray)[i].major);
+        fscanf(fp, "%s %s", (*pStudentArray)[i].YearOfEnrollment, (*pStudentArray)[i].class);
+        fscanf(fp, "%u", &(*pStudentArray)[i].status);
         fscanf(fp, "%s %s", (*pStudentArray)[i].address, (*pStudentArray)[i].phoneNumber);
         fscanf(fp, "%d", &(*pStudentArray)[i].subjectNum);
 

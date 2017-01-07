@@ -556,7 +556,7 @@ void StudentSubjectModule(SMS *pSMS)
 
 
         case 3:
-            DeleteAllStudentSubjectInfo(pSMS->pStudent, pSMS->studentLen);
+            ChangeAllStudentSubjectInfo(pSMS->pStudent, pSMS->studentLen);
 
             break;
 

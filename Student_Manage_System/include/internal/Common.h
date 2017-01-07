@@ -11,8 +11,17 @@
 #define SUBJECT_NAME_LEN 20
 #define ID_LEN 20
 #define CLASS_NAME_LEN 20
+#define NATIVE_PLACE_LEN 20
+#define BIRTHDAY_LEN 20
+#define MAJOR_LEN 20
+#define YEAR_OF_ENROLLMENT_LEN 20
+
+
+
 
 #define STRINGBUFFERLEN 256
+
+
 
 #define true 1
 #define false 0
@@ -26,7 +35,25 @@ typedef struct _admin admin;
 typedef struct _class class;
 typedef struct _fileStruct fileStruct;
 typedef struct _SMS SMS;
+
+typedef enum _enum_status enum_status;
+typedef enum _enum_sex enum_sex;
 typedef char bool;
+
+
+enum _enum_sex
+{
+    Male,
+    Female
+};
+
+enum _enum_status
+{
+    Be_Studying_At_School,          //  在读
+    Suspension_of_Schooling,       // 休学
+    Leavel_School,                 // 退学
+    Serve_in_Army                  // 服兵役
+};
 
 
 // 该系统中所有人的账号信息
@@ -60,7 +87,13 @@ struct _student
 {
     struct _ID id;
     char name[NAME_LEN];
+    enum_sex sex;
+    char nativePlace[NATIVE_PLACE_LEN];
+    char birthday[BIRTHDAY_LEN];
+    char major[MAJOR_LEN];
+    char YearOfEnrollment[YEAR_OF_ENROLLMENT_LEN];
     char class[CLASS_NAME_LEN];
+    enum_status status;
     char address[ADDRESS_LEN];
     char phoneNumber[PHONENUMBER_LEN];
     struct _subject *pSubject;

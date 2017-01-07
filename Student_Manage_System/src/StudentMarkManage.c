@@ -60,7 +60,6 @@ void ChangeMark(student *const pStudent)
 
     size_t i;
     bool Changeflag;
-    char _subject_[STRINGBUFFERLEN];
     float mark;
 
     for(i=0; i < pStudent->subjectNum; ++i)

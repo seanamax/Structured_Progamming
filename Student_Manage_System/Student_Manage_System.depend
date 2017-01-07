@@ -184,3 +184,161 @@
 1483534170 d:\chris_data\homework\structured_progamming\student_manage_system\include\internal\basicfunc.h
 	"Common.h"
 
+1483534266 source:g:\structured_progamming\student_manage_system\src\basicfunc.c
+	"../include/internal/BasicFunc.h"
+	"stdio.h"
+
+1483534172 g:\structured_progamming\student_manage_system\include\internal\basicfunc.h
+	"Common.h"
+
+1483708912 g:\structured_progamming\student_manage_system\include\internal\common.h
+	<stdlib.h>
+	<stdio.h>
+
+1483767184 source:g:\structured_progamming\student_manage_system\src\filesystem.c
+	"../include/internal/FileSystem.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+
+1483545220 g:\structured_progamming\student_manage_system\include\internal\filesystem.h
+	"common.h"
+
+1483767200 source:g:\structured_progamming\student_manage_system\src\main.c
+	"../include/internal/Common.h"
+	"../include/SMS.h"
+	"../test/include/UnitTest.h"
+	<string.h>
+
+1483636988 g:\structured_progamming\student_manage_system\include\sms.h
+	"./internal/common.h"
+
+1483589766 g:\structured_progamming\student_manage_system\test\include\unittest.h
+	"../../include/internal/FileSystem.h"
+	<stdio.h>
+
+1483729678 source:g:\structured_progamming\student_manage_system\src\sms.c
+	"../include/SMS.h"
+	"../include/internal/CounsellorInfoManage.h"
+	"../include/internal/StudentInfoManage.h"
+	"../include/internal/StudentMarkManage.h"
+	"../include/internal/StudentSubjectManage.h"
+	"../include/internal/UserManage.h"
+	"../include/internal/FileSystem.h"
+	"../include/internal/BasicFunc.h"
+	<assert.h>
+	<stdio.h>
+	<windows.h>
+
+1483583458 g:\structured_progamming\student_manage_system\include\internal\counsellorinfomanage.h
+	"common.h"
+
+1483599884 g:\structured_progamming\student_manage_system\include\internal\studentinfomanage.h
+	"common.h"
+
+1483619898 g:\structured_progamming\student_manage_system\include\internal\studentmarkmanage.h
+	"Common.h"
+
+1483633362 g:\structured_progamming\student_manage_system\include\internal\studentsubjectmanage.h
+	"common.h"
+
+1483635466 g:\structured_progamming\student_manage_system\include\internal\usermanage.h
+	"common.h"
+
+1483708116 source:g:\structured_progamming\student_manage_system\src\studentmarkmanage.c
+	"../include/internal/StudentMarkManage.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+
+1483710452 source:g:\structured_progamming\student_manage_system\test\src\counsellorinfomanage_test.c
+	"../include/UnitTest.h"
+	"../../include/internal/CounsellorInfoManage.h"
+	<stdio.h>
+	<assert.h>
+	<string.h>
+
+1483548720 source:g:\structured_progamming\student_manage_system\test\src\filesystem_test.c
+	"../include/UnitTest.h"
+	"../../include/internal/FileSystem.h"
+	"../../include/internal/StudentInfoManage.h"
+	"../../include/internal/CounsellorInfoManage.h"
+	<assert.h>
+	<string.h>
+
+1483708806 source:g:\structured_progamming\student_manage_system\test\src\sms_test.c
+	"../include/UnitTest.h"
+	"../../include/internal/CounsellorInfoManage.h"
+	"../../include/internal/StudentInfoManage.h"
+	"../../include/internal/FileSystem.h"
+	"../../include/internal/StudentMarkManage.h"
+	"../../include/internal/UserManage.h"
+	"../../include/SMS.h"
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1483618920 source:g:\structured_progamming\student_manage_system\test\src\studentinfomanage_test.c
+	"../include/UnitTest.h"
+	<stdio.h>
+	<assert.h>
+
+1483671474 source:g:\structured_progamming\student_manage_system\test\src\studentmarkmanage_test.c
+	"../include/UnitTest.h"
+	"../../include/internal/StudentMarkManage.h"
+	<assert.h>
+
+1483671508 source:g:\structured_progamming\student_manage_system\test\src\studentsubjectmanage_test.c
+	"../include/UnitTest.h"
+	"../../include/internal/StudentSubjectManage.h"
+	<assert.h>
+
+1483671420 source:g:\structured_progamming\student_manage_system\test\src\unittest.c
+	"../include/UnitTest.h"
+
+1483435474 source:g:\structured_progamming\student_manage_system\test\src\usermanage_test.c
+	"../include/UnitTest.h"
+
+1483710356 source:g:\structured_progamming\student_manage_system\src\studentinfomanage.c
+	"../include/internal/StudentInfoManage.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+
+1483708052 source:g:\structured_progamming\student_manage_system\src\studentsubjectmanage.c
+	"../include/internal/StudentSubjectManage.h"
+	"../include/internal/BasicFunc.h"
+	"../include/internal/StudentInfoManage.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<malloc.h>
+	<assert.h>
+
+1483675062 source:g:\structured_progamming\student_manage_system\src\usermanage.c
+	"../include/internal/UserManage.h"
+	"../include/internal/Common.h"
+	"../include/internal/BasicFunc.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+
+1483707898 source:g:\structured_progamming\student_manage_system\src\counsellorinfomanage.c
+	"../include/internal/CounsellorInfoManage.h"
+	"../include/internal/Common.h"
+	"../include/internal/BasicFunc.h"
+	"../include/internal/StudentInfoManage.h"
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+

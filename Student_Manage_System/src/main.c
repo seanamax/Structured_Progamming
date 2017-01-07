@@ -13,8 +13,8 @@ int main()
     strcpy(pSMS->FileStruct.profile, profilePath);
     InitSMS(pSMS);
     RunSMS(pSMS);
+    free(pSMS);
 
-    //freopen("1.txt", "rw+", stdin);
-    //UnitTest();
+
     return 0;
 }

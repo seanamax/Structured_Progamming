@@ -1,9 +1,12 @@
 #include "../include/internal/CounsellorInfoManage.h"
 #include "../include/internal/Common.h"
+#include "../include/internal/BasicFunc.h"
+#include "../include/internal/StudentInfoManage.h"
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 
 // 删除辅导员信息， 通过 标记 flag 惰性删除
 // counsellor pcounsellorArray[] 参数指辅导员数组指针
@@ -123,11 +126,10 @@ void ChangeCounsellorInfo(counsellor *const pCounsellor)
     assert(pCounsellor && "the pointer is NULL");
 
     counsellor inputCounsellor;
-    size_t i;
     bool changeFlag;
 
     inputCounsellor = *pCounsellor;
-    DispStudentInfo(pCounsellor);
+    DispCounsellorInfo(pCounsellor);
 
     PrintSplitLine();
     printf("Do you change the name ? y/n  ");
@@ -256,6 +258,8 @@ bool LocateCounsellorInfo(const counsellor *const pCounsellorArray, const size_t
     case 3:
         return false;
     }
+
+    return false;
 }
 
 
